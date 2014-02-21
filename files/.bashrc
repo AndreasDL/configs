@@ -12,6 +12,8 @@ alias lla='ll -a'
 alias pacman='sudo pacman'
 alias dualscreen='xrandr --output LVDS --auto --output VGA-0 --auto --right-of LVDS'
 alias singlescreen='xrandr --output LVDS --auto --output VGA-0 --off'
+alias mount='sudo mount -ouser,umask=0000'
+alias umount='sudo umount'
 
 alias hibernate='sudo pm-hibernate'
 alias suspend='sudo pm-suspend'
@@ -29,6 +31,5 @@ export PERL_MB_OPT="--install_base "/home/drew/perl5"";
 export PERL_MM_OPT="INSTALL_BASE=/home/drew/perl5";
 export PERL5LIB="/home/drew/perl5/lib/perl5:$PERL5LIB";
 export PATH="/home/drew/perl5/bin:/opt/android-sdk/tools/:$PATH";
-
 
 HISTIGNORE="cd:ls:ll:dir:clear:exit";

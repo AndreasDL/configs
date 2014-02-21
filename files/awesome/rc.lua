@@ -126,7 +126,7 @@ vicious.register(memwidget,vicious.widgets.mem, "Mem:$2M ($1%) | " , 43)
 
 --battery widget
 batwidget = wibox.widget.textbox()
-vicious.register(batwidget,vicious.widgets.bat, "Bat: $2%$1  | ", 37 , "BAT0")
+vicious.register(batwidget,vicious.widgets.bat, "Bat: $2%$1  | ", 11 , "BAT0")
 
 -- network widget
 -- netwidget = wibox.widget.textbox()
