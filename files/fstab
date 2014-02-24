@@ -1,0 +1,13 @@
+# /dev/sda7
+UUID=38f69b34-3dc2-48e7-b3f7-9a270c5309c1	/         	ext4      	rw,relatime,data=ordered	0 1
+
+# /dev/sda6
+UUID=5a3c01ac-6ac2-403c-9224-0ccb2a53db86	none      	swap      	defaults  	0 0
+
+# /dev/sda3
+UUID=0AE883F5E883DD77				/mnt/Acer	ntfs-3g		defaults	0 0
+
+# /dev/sda3
+UUID=62720EF0720EC8AD				/mnt/m3h	ntfs-3g		defaults	0 0
+
+

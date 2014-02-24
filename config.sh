@@ -16,6 +16,7 @@ if [ "$1" == "backup" ]; then
 	cp -v  /etc/fstab 					files/;
 	cp -v  /etc/sudoers 				files/;
 	cp -v  /etc/X11/xorg.conf.d/10-evdev.conf files/;
+	cp -v  /etc/systemd/logind.conf     files/;
 elif [ "$1" == "restore" ]; then	
 	#restore backup
 	cp -v  files/.bashrc 			/home/drew/;
@@ -28,6 +29,7 @@ elif [ "$1" == "restore" ]; then
 	cp -v  files/fstab 				/etc/;
 	cp -v  files/sudoers 			/etc/;
 	cp -v  files/10-evdev.conf 		/etc/X11/xorg.conf.d/;
+	cp -v  files/logind.conf        /etc/systemd/logind.conf;
 else
 	echo "backup => backup files to files/"
 	echo "Restore => restore files from files/";
