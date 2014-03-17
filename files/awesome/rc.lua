@@ -14,8 +14,6 @@ vicious = require("vicious")  --widgets mogelijk maken
 awful.util.spawn_with_shell("xcompmgr &") --transparante schermen mogelijk maken
 awful.util.spawn_with_shell("xscreensaver -no-splash") --screensaver mogelijk maken
 
-
-
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)

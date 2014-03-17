@@ -15,8 +15,8 @@ alias singlescreen='xrandr --output LVDS --auto --output VGA-0 --off'
 #alias mount='sudo mount -ouser,umask=0000'
 #alias umount='sudo umount'
 
-alias hibernate='sudo pm-hibernate'
-alias suspend='sudo pm-suspend'
+alias hibernate='systemctl hibernate'
+alias suspend='systemctl suspend'
 alias reboot='sudo reboot'
 alias poweroff='sudo poweroff'
 #sudo => geen wachtwoord vragen zo ingesteld in /etc/sudoers
