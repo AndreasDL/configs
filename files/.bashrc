@@ -17,8 +17,8 @@ alias singlescreen='xrandr --output LVDS --auto --output VGA-0 --off'
 
 alias hibernate='systemctl hibernate'
 alias suspend='systemctl suspend'
-alias reboot='sudo reboot'
-alias poweroff='sudo poweroff'
+alias reboot='systemctl reboot'
+alias poweroff='systemctl poweroff'
 #sudo => geen wachtwoord vragen zo ingesteld in /etc/sudoers
 
 alias mmake='cmake CMakeLists.txt ; make'

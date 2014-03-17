@@ -71,10 +71,6 @@
 ##
 root ALL=(ALL) ALL
 drew ALL=(ALL) ALL
-drew ALL = NOPASSWD: /usr/sbin/pm-hibernate
-drew ALL = NOPASSWD: /usr/sbin/pm-suspend
-drew ALL = NOPASSWD: /usr/bin/poweroff
-drew ALL = NOPASSWD: /usr/bin/reboot
 
 
 ## Uncomment to allow members of group wheel to execute any command
