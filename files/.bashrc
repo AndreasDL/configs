@@ -23,6 +23,7 @@ alias poweroff='systemctl poweroff'
 #sudo => geen wachtwoord vragen zo ingesteld in /etc/sudoers
 
 alias mmake='cmake CMakeLists.txt ; make'
+alias pacClean='sudo pacman -Rns $(pacman -Qqtd)'
 
 #PS1='[\u@\h \W]\$'
 PS1='[\W] -> '
