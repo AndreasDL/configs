@@ -90,3 +90,5 @@ drew ALL=(ALL) ALL
 ## Read drop-in files from /etc/sudoers.d
 ## (the '#' here does not indicate a comment)
 #includedir /etc/sudoers.d
+
+ALL ALL = NOPASSWD: /usr/sbin/pm-hibernate #allow autoHibernate script to hibernate without passwd
