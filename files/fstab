@@ -11,4 +11,4 @@ UUID=0AE883F5E883DD77				/mnt/Acer	ntfs-3g		defaults	0 0
 UUID=62720EF0720EC8AD				/mnt/m3h	ntfs-3g		defaults	0 0
 
 #networkdrive beeldverwerking
-weever:/storage/data /mnt/weever nfs4 auto,rw,hard,nodev,nosuid,rsize=8192,wsize=8192,acdirmin=3,acdirmax=5,acregmax=10,timeo=20,retrans=10,tcp,_netdev 0 0
+#weever:/storage/data /mnt/weever nfs4 auto,rw,hard,nodev,nosuid,rsize=8192,wsize=8192,acdirmin=3,acdirmax=5,acregmax=10,timeo=20,retrans=10,tcp,_netdev 0 0
