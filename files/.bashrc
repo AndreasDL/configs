@@ -10,10 +10,10 @@ alias ll='ls -lh'
 alias lla='ll -a'
 
 alias pacman='sudo pacman'
+alias systemctl='sudo systemctl'
+
 alias dualscreen='xrandr --output LVDS --auto --output VGA-0 --auto --right-of LVDS'
 alias singlescreen='xrandr --output LVDS --auto --output VGA-0 --off'
-#alias mount='sudo mount -ouser,umask=0000'
-#alias umount='sudo umount'
 
 alias lock='xscreensaver-command -lock'
 alias hibernate='xscreensaver-command -lock;systemctl hibernate'
@@ -24,6 +24,9 @@ alias poweroff='systemctl poweroff'
 
 alias mmake='cmake CMakeLists.txt ; make'
 alias pacClean='sudo pacman -Rns $(pacman -Qqtd)'
+
+alias rtorrent='screen rtorrent'
+
 
 #PS1='[\u@\h \W]\$'
 PS1='[\W] -> '

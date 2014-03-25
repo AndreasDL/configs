@@ -19,6 +19,7 @@ if [ "$1" == "backup" ]; then
 	cp -v  /etc/systemd/logind.conf     			files/;
 	cp -v  /etc/slim.conf               			files/;
 	cp -vr /home/drew/workspace/battery		 	files/;
+	cp -v  /home/drew/.vimrc				files/;
 
 	crontab -u drew -l > files/crontab;
 
@@ -37,7 +38,7 @@ elif [ "$1" == "restore" ]; then
 	cp -v  files/logind.conf        	/etc/systemd/logind.conf;
 	cp -v  files/slim.conf          	/etc/slim.conf;
 	cp -vr files/battery	 		/home/drew/workspace/;
-	
+	cp -v  files/.vimrc			/home/drew/.vimrc;
 	crontab -u drew files/crontab;
 else
 	echo "backup => backup files to files/"
