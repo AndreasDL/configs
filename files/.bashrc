@@ -10,7 +10,6 @@ alias ll='ls -lh'
 alias lla='ll -a'
 
 alias pacman='sudo pacman'
-alias systemctl='sudo systemctl'
 
 alias dualscreen='xrandr --output LVDS --auto --output VGA-0 --auto --right-of LVDS'
 alias singlescreen='xrandr --output LVDS --auto --output VGA-0 --off'
