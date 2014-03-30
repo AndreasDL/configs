@@ -15,7 +15,7 @@ Plugin 'msanders/snipmate.vim'
 set autoindent
 set backspace=indent,eol,start
 set complete-=i
-set smarttab "Nenee douwe geen storende tabs
+set smarttab
 
 set nrformats-=octal
 set shiftround
