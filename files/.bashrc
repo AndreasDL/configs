@@ -25,7 +25,7 @@ alias mmake='cmake CMakeLists.txt ; make'
 alias pacClean='sudo pacman -Rns $(pacman -Qqtd)'
 
 alias rtorrent='screen rtorrent'
-
+alias sdrop='nice -n 10 dropbox start'
 
 #PS1='[\u@\h \W]\$'
 PS1='[\W] -> '

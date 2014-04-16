@@ -115,7 +115,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 
 --cpuwidget
 cputext = wibox.widget.textbox()
-vicious.register(cputext,vicious.widgets.cpu, " Cpu:$1% | " , 2)
+vicious.register(cputext,vicious.widgets.cpu, " Cpu:$2% $3%| " , 2)
 
 --memory widget
 memwidget = wibox.widget.textbox()
