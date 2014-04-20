@@ -10,22 +10,22 @@ alias ll='ls -lh'
 alias lla='ll -a'
 
 alias pacman='sudo pacman'
+#alias systemctl='sudo systemctl' =>commenten anders werkt suspend en hibernate alias nemeer vlot
 
 alias dualscreen='xrandr --output LVDS --auto --output VGA-0 --auto --right-of LVDS'
 alias singlescreen='xrandr --output LVDS --auto --output VGA-0 --off'
+alias brightSetter='/home/drew/workspace/brightnessChanger/brightnessChanger.sh'
 
 alias lock='xscreensaver-command -lock'
 alias hibernate='xscreensaver-command -lock;systemctl hibernate'
 alias suspend='xscreensaver-command -lock;systemctl suspend'
-alias reboot='systemctl reboot'
-alias poweroff='systemctl poweroff'
-#sudo => geen wachtwoord vragen zo ingesteld in /etc/sudoers
 
 alias mmake='cmake CMakeLists.txt ; make'
 alias pacClean='sudo pacman -Rns $(pacman -Qqtd)'
 
 alias rtorrent='screen rtorrent'
 alias sdrop='nice -n 10 dropbox start'
+
 
 #PS1='[\u@\h \W]\$'
 PS1='[\W] -> '

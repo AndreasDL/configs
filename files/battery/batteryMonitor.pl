@@ -6,7 +6,7 @@ use warnings;
 
 my $percent = 10; #when lower then $percent, hibernate laptop
 my $lockCommand = "xscreensaver-command -lock;";
-my $hibernateCommand = "sudo /usr/bin/pm-hibernate;";
+my $actionCommand = "sudo /usr/bin/pm-suspend;";
 #"/usr/bin/systemctl hibernate > /home/test/log 2>&1;"; #Doesn't work for some reason...
 
 my $status = `acpi -b`;
@@ -21,5 +21,7 @@ print "$1\t$2\n";
 if ($1 eq 'Discharging' && $2 <= $percent){
 	print "hibernate!\n";
 	`$lockCommand`;
-	`$hibernateCommand`;
+	`$actionCommand`;
+}else{
+	print "do nothing\n";
 }

@@ -115,7 +115,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 
 --cpuwidget
 cputext = wibox.widget.textbox()
-vicious.register(cputext,vicious.widgets.cpu, " Cpu:$2% $3%| " , 2)
+vicious.register(cputext,vicious.widgets.cpu, " Cpu:$1% [cpu0: $2% cpu1: $3% cpu2: $4% cpu3: $5%] | " , 2)
 
 --memory widget
 memwidget = wibox.widget.textbox()
@@ -124,7 +124,7 @@ vicious.register(memwidget,vicious.widgets.mem, "Mem:$2M ($1%) | " , 43)
 
 --battery widget
 batwidget = wibox.widget.textbox()
-vicious.register(batwidget,vicious.widgets.bat, "Bat: $1 $2% ($3) | ", 11 , "BAT0")
+vicious.register(batwidget,vicious.widgets.bat, "Bat: $1 $2% ($3) | ", 11 , "BAT1")
 
 -- network widget
 -- netwidget = wibox.widget.textbox()
@@ -177,7 +177,7 @@ end
 -- configuration - edit to your liking
 wp_index = 1
 wp_timeout  = 371
-wp_path = "/mnt/m3h/LinuxBack/"
+wp_path = "/mnt/data/LinuxBack/"
 wp_filter = function(s) return string.match(s,"%.png$") or string.match(s,"%.jpg$") end
 wp_files = scandir(wp_path, wp_filter)
  

@@ -71,10 +71,8 @@
 ##
 root ALL=(ALL) ALL
 drew ALL=(ALL) ALL
-
-
 ## Uncomment to allow members of group wheel to execute any command
-# %wheel ALL=(ALL) ALL
+#%wheel ALL=(ALL) ALL
 
 ## Same thing without a password
 # %wheel ALL=(ALL) NOPASSWD: ALL
@@ -91,4 +89,5 @@ drew ALL=(ALL) ALL
 ## (the '#' here does not indicate a comment)
 #includedir /etc/sudoers.d
 
-ALL ALL = NOPASSWD: /usr/sbin/pm-hibernate #allow autoHibernate script to hibernate without passwd
+ALL ALL = NOPASSWD: /usr/sbin/pm-hibernate #allow battery script to hibernate without passwd
+ALL ALL = NOPASSWD: /usr/sbin/pm-suspend 
