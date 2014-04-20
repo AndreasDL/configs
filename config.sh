@@ -13,8 +13,9 @@ cp -v  /etc/sudoers 							files/;
 cp -v  /etc/X11/xorg.conf.d/10-evdev.conf 		files/;
 cp -v  /etc/systemd/logind.conf     			files/;
 cp -v  /etc/slim.conf               			files/;
-cp -vr /home/drew/workspace/battery		 		files/;
 cp -v  /home/drew/.vimrc						files/;
-cp -vr /usr/share/awesome/themes				files;
+cp -vr /usr/share/awesome/themes				files/;
+cp -vr /home/drew/workspace/battery		 		files/;
+cp -vr /home/drew/workspace/brightnessChanger   files/;
 
 crontab -u drew -l > files/crontab;
