@@ -131,7 +131,7 @@ vicious.register(batwidget,vicious.widgets.bat, "Bat: $1 $2% ($3) | ", 11 , "BAT
 -- vicious.register(netwidget,vicious.widgets.net, "Down: ${wlp3s0 down_kb} | Up: ${wlp3s0 up_kb} | " , 3)
 
 -- Create a textclock widget
-mytextclock = awful.widget.textclock("%H:%M:%S",1)
+mytextclock = awful.widget.textclock("%a %d %b, %H:%M:%S",1)
 
 -- Keyboard map indicator and changer
 -- Put keyboard in be by default
