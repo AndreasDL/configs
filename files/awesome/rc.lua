@@ -115,7 +115,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 
 --cpuwidget
 cputext = wibox.widget.textbox()
-vicious.register(cputext,vicious.widgets.cpu, " Cpu:$1% [cpu0: $2% cpu1: $3% cpu2: $4% cpu3: $5%] | " , 2)
+vicious.register(cputext,vicious.widgets.cpu, " Cpu:$1% [cpu0: $2% cpu1: $3%] | " , 2)
 
 --memory widget
 memwidget = wibox.widget.textbox()
@@ -124,14 +124,14 @@ vicious.register(memwidget,vicious.widgets.mem, "Mem:$2M ($1%) | " , 43)
 
 --battery widget
 batwidget = wibox.widget.textbox()
-vicious.register(batwidget,vicious.widgets.bat, "Bat: $1 $2% ($3) | ", 11 , "BAT1")
+vicious.register(batwidget,vicious.widgets.bat, "Bat: $1 $2% ($3) | ", 11 , "BAT0")
 
 -- network widget
 -- netwidget = wibox.widget.textbox()
 -- vicious.register(netwidget,vicious.widgets.net, "Down: ${wlp3s0 down_kb} | Up: ${wlp3s0 up_kb} | " , 3)
 
 -- Create a textclock widget
-mytextclock = awful.widget.textclock()
+mytextclock = awful.widget.textclock("%H:%M:%S",1)
 
 -- Keyboard map indicator and changer
 -- Put keyboard in be by default
