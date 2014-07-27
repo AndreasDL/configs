@@ -1,11 +1,14 @@
 # /dev/sdb8
-UUID=a4734306-8c1a-4409-8aa4-a6d8f9daa32c	/         	ext4      	rw,relatime,data=ordered	0 1
+UUID=96b6d054-bb64-4071-8f15-3e7978ee353f	/         	ext4      	rw,relatime,data=ordered	0 1
 
-# /dev/sdb2 LABEL=ESP
-UUID=5E02-F5B6      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro	0 2
+# /dev/sdb2
+UUID=449F-D911      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro	0 2
 
 # /dev/sdb7
-UUID=26005f22-7a58-40b2-9b46-cf99f74e2fd8	none      	swap      	defaults  	0 0
+UUID=a88f3db3-d7f5-451d-b339-41e8f34347f0	none      	swap      	defaults  	0 0
 
-UUID=01CF59C6F34D2670	/mnt/acer	ntfs-3g	defaults	0	0
-UUID=01CF5A301D7942D0	/mnt/data	ntfs-3g	defaults	0	0	
+# /dev/sda5
+UUID="0C780C94780C7F28"	/mnt/data	ntfs-3g	defaults	0	0
+
+# /dev/sda4
+UUID="7054234654230E82"	/mnt/windows	ntfs-3g	defaults	0	0

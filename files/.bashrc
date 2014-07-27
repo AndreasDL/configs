@@ -10,22 +10,17 @@ alias ll='ls -lh'
 alias lla='ll -a'
 
 alias pacman='sudo pacman'
-#alias systemctl='sudo systemctl' =>commenten anders werkt suspend en hibernate alias nemeer vlot
 
-alias dualscreen='xrandr --output LVDS --auto --output VGA-0 --auto --right-of LVDS'
-alias singlescreen='xrandr --output LVDS --auto --output VGA-0 --off'
-alias brightSetter='/home/drew/workspace/brightnessChanger/brightnessChanger.sh'
+alias dualscreen='xrandr --output eDP1 --auto --output HDMI1 --auto --right-of eDP1'
+alias singlescreen='xrandr --output eDP1 --auto --output HDMI1 --off'
 
 alias lock='xscreensaver-command -lock'
 alias hibernate='xscreensaver-command -lock;systemctl hibernate'
 alias suspend='xscreensaver-command -lock;systemctl suspend'
+alias hybrid-sleep='xscreensaver-command -lock;systemctl hybrid-sleep'
 
-alias mmake='cmake CMakeLists.txt ; make'
-alias pacClean='sudo pacman -Rns $(pacman -Qqtd)'
-
+#alias pacClean='sudo pacman -Rns $(pacman -Qqtd)'
 alias rtorrent='screen rtorrent'
-alias sdrop='nice -n 10 dropbox start'
-
 
 #PS1='[\u@\h \W]\$'
 PS1='[\W] -> '
@@ -34,6 +29,9 @@ export PERL_LOCAL_LIB_ROOT="/home/drew/perl5:$PERL_LOCAL_LIB_ROOT";
 export PERL_MB_OPT="--install_base "/home/drew/perl5"";
 export PERL_MM_OPT="INSTALL_BASE=/home/drew/perl5";
 export PERL5LIB="/home/drew/perl5/lib/perl5:$PERL5LIB";
-export PATH="/home/drew/perl5/bin:/opt/android-sdk/tools/:$PATH";
-
+export PATH="/home/drew/perl5/bin:/opt/android-sdk/tools/:/opt/java/bin/:$PATH";
+export JAVA_HOME="/opt/java";
+export JDK_HOME="/opt/java";
+export STUDIO_HOME="/opt/java";
+export EDITOR="vim";
 HISTIGNORE="cd:ls:ll:dir:clear:exit";
