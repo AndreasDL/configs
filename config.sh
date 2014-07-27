@@ -5,6 +5,7 @@ mkdir files;
 cp -v  /home/drew/.bashrc 				files/;
 cp -v  /home/drew/.xinitrc 				files/;
 cp -v  /home/drew/.screenrc				files/;
+cp -v  /home/drew/.vimrc				files/;
 cp -v  /etc/systemd/logind.conf     			files/;
 cp -v  /etc/X11/xorg.conf.d/10-evdev.conf 		files/; #keyboard settings
 cp -v  /etc/slim.conf               			files/;
