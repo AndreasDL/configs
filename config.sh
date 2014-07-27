@@ -2,11 +2,15 @@
 rm -rf files;
 mkdir files;
 
+#rc
 cp -v  /home/drew/.bashrc 				files/;
 cp -v  /home/drew/.xinitrc 				files/;
 cp -v  /home/drew/.screenrc				files/;
 cp -v  /home/drew/.vimrc				files/;
+
+#system stuffs
 cp -v  /etc/systemd/logind.conf     			files/;
+cp -vr /etc/udev/rules.d/						files/; #udev rules for among others auto hybernate
 cp -v  /etc/X11/xorg.conf.d/10-evdev.conf 		files/; #keyboard settings
 cp -v  /etc/slim.conf               			files/;
 cp -v  /etc/sudoers 					files/;
