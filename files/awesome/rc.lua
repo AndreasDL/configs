@@ -555,9 +555,9 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
+
 -- battery warning
 -- created by bpdp
-
 local function trim(s)
   return s:find'^%s*$' and '' or s:match'^%s*(.*%S)'
 end
@@ -573,15 +573,15 @@ local function bat_notification()
   if (bat_capacity <= 10 and bat_status == "Discharging") then
     naughty.notify({ title      = "Battery Warning"
       , text       = "Battery low! " .. bat_capacity .."%" .. " left!"
-      , fg="#ff0000"
-      , bg="#deb887"
-      , timeout    = 15
-      , position   = "top_right"
+      , fg="#ffffff"
+      , bg="#C91C1C"
+      , timeout    = 0
+      , position   = "bottom_right"
     })
   end
 end
 
-battimer = timer({timeout = 60})
+battimer = timer({timeout = 30})
 battimer:connect_signal("timeout", bat_notification)
 battimer:start()
 
