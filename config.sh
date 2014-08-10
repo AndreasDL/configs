@@ -13,11 +13,11 @@ cp -v  /etc/systemd/logind.conf     			files/;
 cp -vr /etc/udev/rules.d/						files/; #udev rules for among others auto hybernate
 cp -v  /etc/X11/xorg.conf.d/10-evdev.conf 		files/; #keyboard settings
 cp -v  /etc/slim.conf               			files/;
-cp -v  /etc/sudoers 					files/;
-cp -v  /etc/fstab 					files/; #example has no real use
+cp -v  /etc/sudoers 							files/;
+cp -v  /etc/fstab 								files/; #example has no real use
 i
-cp -v  /home/drew/.rtorrent.rc 				files/;
-cp -v  /usr/local/bin/ydl 				files/; #download script
+cp -v  /home/drew/.rtorrent.rc 					files/;#rtorrent config
+cp -vr /usr/local/bin/ 							files/; #download script brightnessScript
 
-cp -vr /home/drew/.config/awesome 			files/; #awesome config
-cp -vr /usr/share/awesome/themes			files/;
+cp -vr /home/drew/.config/awesome 				files/; #awesome config
+cp -vr /usr/share/awesome/themes/default/theme.lua		files/;#awesome theme config file
