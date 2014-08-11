@@ -24,6 +24,7 @@ alias rtorrent='screen rtorrent'
 
 #PS1='[\u@\h \W]\$'
 PS1='[\W] -> '
+#PS1='\[\e[1;32m\][\W]\[\e[0m\] -> '
 
 export PERL_LOCAL_LIB_ROOT="/home/drew/perl5:$PERL_LOCAL_LIB_ROOT";
 export PERL_MB_OPT="--install_base "/home/drew/perl5"";

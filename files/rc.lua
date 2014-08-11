@@ -44,7 +44,7 @@ end
 beautiful.init("/usr/share/awesome/themes/default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "urxvt" --"xfce4-terminal" --"xterm" --urxvt
+terminal = "urxvt" --x"fce4-terminal" --"xterm" --urxvt
 editor = os.getenv("EDITOR") or "vim" --"nano"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -570,7 +570,7 @@ local function bat_notification()
   local bat_capacity = tonumber(f_capacity:read("*all"))
   local bat_status = trim(f_status:read("*all"))
 
-  if (bat_capacity <= 10 and bat_status == "Discharging") then
+  if (bat_capacity <= 7 and bat_status == "Discharging") then
     naughty.notify({ title      = "Battery Warning"
       , text       = "Battery low! " .. bat_capacity .."%" .. " left!"
       , fg="#ffffff"
