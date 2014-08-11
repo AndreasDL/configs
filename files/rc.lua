@@ -44,7 +44,7 @@ end
 beautiful.init("/usr/share/awesome/themes/default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "xfce4-terminal" --"xterm" --urxvt
+terminal = "urxvt" --"xfce4-terminal" --"xterm" --urxvt
 editor = os.getenv("EDITOR") or "vim" --"nano"
 editor_cmd = terminal .. " -e " .. editor
 

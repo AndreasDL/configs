@@ -9,7 +9,7 @@ cp -v  /home/drew/.xinitrc 						files/; #xinit
 cp -v  /home/drew/.screenrc						files/; #screen
 cp -v  /home/drew/.vimrc						files/; #vim
 cp -v  /home/drew/.rtorrent.rc 					files/; #rtorrent
-cp -v  /home/drew/.Xresources					files/; #urxvt
+cp -v  /home/drew/.Xdefaults					files/; #urxvt
 
 #system configs
 cp -v  /etc/systemd/logind.conf     			files/; #lid closed actions etc
