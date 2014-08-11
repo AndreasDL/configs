@@ -1,5 +1,5 @@
 URxvt*.depth: 32
-URxvt*background: [57]#000000
+URxvt*background: [67]#000000
 URxvt*foreground: #ffffff
 
 URxvt.saveLines:32767
@@ -7,7 +7,7 @@ URxvt.scrollBar:true
 URxvt.scrollstyle: plain
 URxvt.scrollBar_right: true
 
-URxvt*font: xft:Terminus:pixelsize=12
+URxvt*font: xft:Monospace:pixelsize=12
 
 URxvt.perl-ext-common: default,matcher
 URxvt.urlLauncher: uzbl-browser

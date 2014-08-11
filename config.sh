@@ -10,6 +10,7 @@ cp -v  /home/drew/.screenrc						files/; #screen
 cp -v  /home/drew/.vimrc						files/; #vim
 cp -v  /home/drew/.rtorrent.rc 					files/; #rtorrent
 cp -v  /home/drew/.Xdefaults					files/; #urxvt
+cp -v  /home/drew/.xbindkeysrc					files/; #xbindkyes for volume keys
 
 #system configs
 cp -v  /etc/systemd/logind.conf     			files/; #lid closed actions etc

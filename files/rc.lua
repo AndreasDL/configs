@@ -11,8 +11,8 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 vicious = require("vicious")  --widgets mogelijk maken
-awful.util.spawn_with_shell("xcompmgr &") --transparante schermen mogelijk maken
-awful.util.spawn_with_shell("xscreensaver -no-splash") --screensaver mogelijk maken
+--awful.util.spawn_with_shell("xcompmgr &") --transparante schermen mogelijk maken
+--awful.util.spawn_with_shell("xscreensaver -no-splash") --screensaver mogelijk maken
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -112,10 +112,17 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- }}}
 
 -- {{{ Wibox
-
+function strFormat(string)
+  len = 3 - strlen(string);
+  for i=0,len do
+    string = " " .. string
+  end
+  return string
+end
 --cpuwidget
+
 cputext = wibox.widget.textbox()
-vicious.register(cputext,vicious.widgets.cpu, " Cpu: $1% [cpu0: $2% cpu1: $3% cpu2: $4% cpu3: $5%] | " , 2)
+vicious.register(cputext,vicious.widgets.cpu," Cpu: $1% [cpu0: $2% cpu1: $3% cpu2: $4% cpu3: $5%] | ", 2)
 
 --memory widget
 memwidget = wibox.widget.textbox()
@@ -126,12 +133,8 @@ vicious.register(memwidget,vicious.widgets.mem, "Mem:$2M ($1%) | " , 43)
 batwidget = wibox.widget.textbox()
 vicious.register(batwidget,vicious.widgets.bat, "Bat: $1 $2% ($3) | ", 11 , "BAT0")
 
--- network widget
--- netwidget = wibox.widget.textbox()
--- vicious.register(netwidget,vicious.widgets.net, "Down: ${wlp3s0 down_kb} | Up: ${wlp3s0 up_kb} | " , 3)
-
 -- Create a textclock widget
-mytextclock = awful.widget.textclock("%a %d %b, %H:%M:%S",1)
+mytextclock = awful.widget.textclock("%a %d %b, %H:%M:%S |",1)
 
 -- Keyboard map indicator and changer
 -- Put keyboard in be by default
@@ -152,6 +155,28 @@ end
 kbdcfg.widget:buttons(
  awful.util.table.join(awful.button({ }, 1, function () kbdcfg.switch() end))
 )
+
+-- Pacman Widget
+pacwidget = wibox.widget.textbox()
+pacwidget_t = awful.tooltip({ objects = { pacwidget},})
+vicious.register(pacwidget, vicious.widgets.pkg,
+                function(widget,args)
+                    local io = { popen = io.popen }
+                    local s = io.popen("yaourt -Qu")
+                    local str = ''
+
+                    for line in s:lines() do
+                        str = str .. line .. "\n"
+                    end
+                    pacwidget_t:set_text(str)
+                    s:close()
+                    ret = ""
+                    if not args[1] == "" then
+                      ret = " | U: " ..args[1]
+                    end
+                    return ret
+                end, 1800, "Arch")
+
 
 --background
 -- {{{ Function definitions
@@ -283,10 +308,10 @@ for s = 1, screen.count() do
     right_layout:add(cputext)
     --right_layout:add(netwidget)
     right_layout:add(memwidget)
-    right_layout:add(batwidget)
     right_layout:add(mytextclock)
-    -- Add widget to your layout
     right_layout:add(kbdcfg.widget)
+    right_layout:add(pacwidget)
+
     if s == 1 then right_layout:add(wibox.widget.systray()) end --tray helemaal rechts
     right_layout:add(mylayoutbox[s])
 
