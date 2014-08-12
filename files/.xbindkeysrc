@@ -7,3 +7,12 @@
 
 "amixer -c 1 set Master toggle"
   XF86AudioMute
+
+"playerctl next"
+  Mod2 + XF86AudioNext
+
+"playerctl play-pause"
+  Mod2 + XF86AudioPlay
+
+"playerctl previous"
+  Mod2 + XF86AudioPrev
