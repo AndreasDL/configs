@@ -11,8 +11,8 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 vicious = require("vicious")  --widgets mogelijk maken
---awful.util.spawn_with_shell("xcompmgr &") --transparante schermen mogelijk maken
---awful.util.spawn_with_shell("xscreensaver -no-splash") --screensaver mogelijk maken
+awful.util.spawn_with_shell("xcompmgr &") --transparante schermen mogelijk maken
+awful.util.spawn_with_shell("xscreensaver -no-splash") --screensaver mogelijk maken
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -201,7 +201,7 @@ end
 
 -- configuration - edit to your liking
 wp_index = 1
-wp_timeout  = 371
+wp_timeout  = 123
 wp_path = "/mnt/data/Dropbox/LinuxBack/"
 wp_filter = function(s) return string.match(s,"%.png$") or string.match(s,"%.jpg$") end
 wp_files = scandir(wp_path, wp_filter)
@@ -306,8 +306,8 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     right_layout:add(cputext)
-    --right_layout:add(netwidget)
     right_layout:add(memwidget)
+    right_layout:add(batwidget)
     right_layout:add(mytextclock)
     right_layout:add(kbdcfg.widget)
     right_layout:add(pacwidget)
@@ -340,7 +340,6 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
     awful.key({ "Control",        }, "Left",   awful.tag.viewprev       ),
     awful.key({ "Control",        }, "Right",   awful.tag.viewnext      ),
-
 
 
     -- alt + tab

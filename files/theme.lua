@@ -4,10 +4,10 @@
 
 theme = {}
 
-theme.font          = "sans 8"
+theme.font          = "Anonymous Pro 10" -- "Monospace 12" --"sans 8"
 
 theme.bg_normal     = "#00000043" --"#22222243"
-theme.bg_focus      = "#1d97da"--"#535d6c"
+theme.bg_focus      = "#ffffff43" --"#1d97da43" --"#535d6c"
 theme.bg_urgent     = "#ff0000"
 theme.bg_minimize   = "#44444443"
 theme.bg_systray    = theme.bg_normal
@@ -17,10 +17,10 @@ theme.fg_focus      = "#ffffff"
 theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
-theme.border_width  = 1
-theme.border_normal = "#000000"
-theme.border_focus  = "#535d6c"
-theme.border_marked = "#91231c"
+theme.border_width  = 0
+theme.border_normal = "#00000043"
+theme.border_focus  = "#ffffff43" --"#535d6c43"
+theme.border_marked = "#91231c43"
 
 theme.bg_widget	    = theme.bg_normal
 theme.fg_widget     = theme.fg_normal

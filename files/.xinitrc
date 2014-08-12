@@ -13,8 +13,6 @@ fi
 
 #services
 xbindkeys
-xcompmgr  #transparancy
-xscreensaver -no-splash #screensaver
 
 # exec gnome-session
 # exec startkde
