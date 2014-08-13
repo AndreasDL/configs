@@ -20,3 +20,5 @@ xbindkeys
 
 * Uses playerctl for next,previous and play-pause
 * Uses amixer for the volume controls
+* Uses xbacklight for the brightness keys
+
