@@ -6,7 +6,7 @@ theme = {}
 
 theme.font          = "Anonymous Pro 10" -- "Monospace 12" --"sans 8"
 
-theme.bg_normal     = "#00000043" --"#22222243"
+theme.bg_normal     = "#00000023" --"#22222243"
 theme.bg_focus      = "#ffffff43" --"#1d97da43" --"#535d6c"
 theme.bg_urgent     = "#ff0000"
 theme.bg_minimize   = "#44444443"

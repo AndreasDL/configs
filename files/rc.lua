@@ -156,28 +156,6 @@ kbdcfg.widget:buttons(
  awful.util.table.join(awful.button({ }, 1, function () kbdcfg.switch() end))
 )
 
--- Pacman Widget
-pacwidget = wibox.widget.textbox()
-pacwidget_t = awful.tooltip({ objects = { pacwidget},})
-vicious.register(pacwidget, vicious.widgets.pkg,
-                function(widget,args)
-                    local io = { popen = io.popen }
-                    local s = io.popen("yaourt -Qu")
-                    local str = ''
-
-                    for line in s:lines() do
-                        str = str .. line .. "\n"
-                    end
-                    pacwidget_t:set_text(str)
-                    s:close()
-                    ret = ""
-                    if not args[1] == "" then
-                      ret = " | U: " ..args[1]
-                    end
-                    return ret
-                end, 1800, "Arch")
-
-
 --background
 -- {{{ Function definitions
 
@@ -310,7 +288,6 @@ for s = 1, screen.count() do
     right_layout:add(batwidget)
     right_layout:add(mytextclock)
     right_layout:add(kbdcfg.widget)
-    right_layout:add(pacwidget)
 
     if s == 1 then right_layout:add(wibox.widget.systray()) end --tray helemaal rechts
     right_layout:add(mylayoutbox[s])
