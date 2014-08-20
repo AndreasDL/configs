@@ -28,6 +28,3 @@ cp -vr /usr/local/bin/ 							files/; #download script brightnessScript
 #awesomeWM
 cp -vr /home/drew/.config/awesome/rc.lua 				files/; #awesome config
 cp -vr /usr/share/awesome/themes/default/theme.lua		files/; #awesome theme config file
-
-#varia
-cp -v  /etc/systemd/system/numlock.service				files/numlock; #turn numlock on on startup
