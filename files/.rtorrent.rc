@@ -1,5 +1,5 @@
 download_rate = 500
-upload_rate = 200
+upload_rate = 100
 
 directory = /mnt/data/done/
 session = /home/drew/.session/
