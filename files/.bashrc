@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
+alias ls='ls --color=never'
 alias ll='ls -lh'
 alias lla='ll -a'
 
@@ -19,7 +19,7 @@ alias hibernate='xscreensaver-command -lock;systemctl hibernate'
 alias suspend='xscreensaver-command -lock;systemctl suspend'
 alias hybrid-sleep='xscreensaver-command -lock;systemctl hybrid-sleep'
 
-#alias pacClean='sudo pacman -Rns $(pacman -Qqtd)'
+alias pacClean='sudo pacman -Rns $(pacman -Qqtd)'
 alias rtorrent='screen rtorrent'
 alias cls='reset && clear'; #clear everything including scroll
 
