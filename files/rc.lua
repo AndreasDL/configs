@@ -571,12 +571,12 @@ local function bat_notification()
   local bat_capacity = tonumber(f_capacity:read("*all"))
   local bat_status = trim(f_status:read("*all"))
 
-  if (bat_capacity <= 5 and bat_status == "Discharging") then
+  if (bat_capacity <= 10 and bat_status == "Discharging") then
     naughty.notify({ title      = "Battery Warning"
       , text       = "Battery low! " .. bat_capacity .."%" .. " left!"
       , fg="#ffffff"
       , bg="#C91C1C"
-      , timeout    = 0
+      , timeout    = 30
       , position   = "bottom_right"
     })
   end
