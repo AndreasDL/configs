@@ -23,6 +23,8 @@ alias pacClean='sudo pacman -Rns $(pacman -Qqtd)'
 alias rtorrent='screen rtorrent'
 alias cls='reset && clear'; #clear everything including scroll
 
+alias sshschool='ssh vsc41265@login.hpc.ugent.be'
+
 #PS1='[\u@\h \W]\$'
 PS1='[\W] -> '
 #PS1='\[\e[1;32m\][\W]\[\e[0m\] -> '

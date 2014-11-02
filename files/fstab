@@ -8,7 +8,7 @@ UUID=449F-D911      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,cod
 UUID=a88f3db3-d7f5-451d-b339-41e8f34347f0	none      	swap      	defaults  	0 0
 
 # /dev/sda5
-UUID="0C780C94780C7F28"	/mnt/data	ntfs-3g	defaults	0	0
+UUID="0C780C94780C7F28"	/mnt/data	ntfs-3g	defaults,nofail	0	0
 
 # /dev/sda4
-UUID="7054234654230E82"	/mnt/windows	ntfs-3g	defaults	0	0
+UUID="7054234654230E82"	/mnt/windows	ntfs-3g	defaults,nofail	0	0
