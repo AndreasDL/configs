@@ -13,6 +13,7 @@ cp -v  /home/drew/.rtorrent.rc 					files/; #rtorrent
 cp -v  /home/drew/.Xdefaults					files/; #urxvt
 cp -v  /home/drew/.xbindkeysrc					files/; #xbindkyes for volume keys
 cp -v  /home/drew/.xscreensaver					files/; #screensaver
+cp -v  /home/drew/.gtkrc-2.0					files/; #gtk theme
 
 #system configs
 cp -v  /etc/systemd/logind.conf     			files/; #lid closed actions etc
