@@ -23,7 +23,8 @@ alias pacClean='sudo pacman -Rns $(pacman -Qqtd)'
 alias rtorrent='screen rtorrent'
 alias cls='reset && clear'; #clear everything including scroll
 
-alias sshschool='ssh vsc41265@login.hpc.ugent.be'
+alias playfirst='mplayer $(ls | head -n 1)'
+alias rmfirst='rm -i $(ls | head -n 1)'
 
 #PS1='[\u@\h \W]\$'
 PS1='[\W] -> '
