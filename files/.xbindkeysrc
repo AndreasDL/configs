@@ -5,7 +5,7 @@
 "amixer -c 1 set Master 5-"
   Mod2 + XF86AudioLowerVolume
 
-"amixer -c 1 set Master toggle"
+"amixer -D pulse set Master 1+ toggle"
   XF86AudioMute
 
 "playerctl next"

@@ -19,7 +19,7 @@ alias hibernate='xscreensaver-command -lock;systemctl hibernate'
 alias suspend='xscreensaver-command -lock;systemctl suspend'
 alias hybrid-sleep='xscreensaver-command -lock;systemctl hybrid-sleep'
 
-alias pacClean='sudo pacman -Rns $(pacman -Qqtd);sudo pacman-optimize && sync;'
+alias pacClean='paccache -r; paccache -ruk0;sudo pacman -Rns $(pacman -Qqtd);sudo pacman-optimize && sync;'
 alias rtorrent='screen rtorrent'
 alias cls='reset && clear'; #clear everything including scroll
 
@@ -36,7 +36,7 @@ export PERL_LOCAL_LIB_ROOT="/home/drew/perl5:$PERL_LOCAL_LIB_ROOT";
 export PERL_MB_OPT="--install_base "/home/drew/perl5"";
 export PERL_MM_OPT="INSTALL_BASE=/home/drew/perl5";
 export PERL5LIB="/home/drew/perl5/lib/perl5:$PERL5LIB";
-export PATH="/home/drew/perl5/bin:/opt/android-sdk/tools/:/opt/java/bin/:$PATH";
+export PATH="/home/drew/perl5/bin:/opt/android-sdk/tools/:/opt/java/bin/:/opt/cuda/include/:$PATH";
 export JAVA_HOME="/opt/java";
 export JDK_HOME="/opt/java";
 export STUDIO_HOME="/opt/java";
