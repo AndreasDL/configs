@@ -23,8 +23,8 @@ alias pacClean='paccache -r; paccache -ruk0;sudo pacman -Rns $(pacman -Qqtd);sud
 alias rtorrent='screen rtorrent'
 alias cls='reset && clear'; #clear everything including scroll
 
-alias playfirst='mplayer $(ls | head -n 1)'
-alias rmfirst='rm -i $(ls | head -n 1)'
+alias playfirst='mplayer "$(ls | head -n 1)"'
+alias rmfirst='rm -i "$(ls | head -n 1)"'
 
 alias orion='ssh user@orion'
 
