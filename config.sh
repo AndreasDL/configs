@@ -27,5 +27,5 @@ cp -v  /etc/fstab 								files/; #example has no real use
 cp -vr /usr/local/bin/ 							files/; #download script brightnessScript
 
 #awesomeWM
-cp -vr /home/drew/.config/awesome/rc.lua 				files/; #awesome config
-cp -vr /usr/share/awesome/themes/default/theme.lua		files/; #awesome theme config file
+cp -vr /home/drew/.config/awesome/rc.lua		files/; #awesome config
+cp -vr /usr/share/awesome/themes/custom			files/; #awesome theme folder
