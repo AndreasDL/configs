@@ -180,7 +180,7 @@ end
 -- configuration - edit to your liking
 wp_index = 1
 wp_timeout  = 123
-wp_path = "/mnt/data/Dropbox/LinuxBack/"
+wp_path = "/usr/share/awesome/themes/custom/backgrounds/"
 wp_filter = function(s) return string.match(s,"%.png$") or string.match(s,"%.jpg$") end
 wp_files = scandir(wp_path, wp_filter)
  
