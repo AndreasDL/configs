@@ -1,7 +1,7 @@
 #backup all usefull config files
 #run as root
 #clear all old files
-#rm -rf files/*;
+rm -rf files/*;
 
 #progs configs
 cp -v  /home/drew/.bashrc 						files/; #bash
