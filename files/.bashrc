@@ -10,6 +10,7 @@ alias ll='ls -lh'
 alias lla='ll -a'
 
 alias pacClean='paccache -r; paccache -ruk0;sudo pacman -Rns $(pacman -Qqtd);sudo pacman-optimize && sync;'
+alias cls='reset && clear'; #clear everything including scroll
 
 alias dualscreen='xrandr --output eDP1 --auto --output HDMI1 --auto --right-of eDP1'
 alias singlescreen='xrandr --output eDP1 --auto --output HDMI1 --off'
@@ -20,8 +21,6 @@ alias suspend='xscreensaver-command -lock;systemctl suspend'
 alias hybrid-sleep='xscreensaver-command -lock;systemctl hybrid-sleep'
 
 alias rtorrent='screen rtorrent'
-alias cls='reset && clear'; #clear everything including scroll
-
 alias playfirst='mplayer "$(ls | head -n 1)"'
 alias rmfirst='rm -i "$(ls | head -n 1)"'
 
@@ -30,10 +29,23 @@ alias orion='ssh user@orion'
 alias hblock='sudo cp /etc/hosts.block /etc/hosts'
 alias hublock='cat /etc/hosts | head -n 12 | sudo tee /etc/hosts'
 
+# Epoch time conversion
+epoch() {
+  TESTREG="[\d{10}]"
+  if [[ "$1" =~ $TESTREG ]]; then
+    # is epoch
+    date -d @$*
+  else
+    # is date
+    if [ $# -gt 0 ]; then
+      date +%s --date="$*"
+    else
+      date +%s
+    fi
+  fi
+}
 
-#PS1='[\u@\h \W]\$'
 PS1='[\W] -> '
-#PS1='\[\e[1;32m\][\W]\[\e[0m\] -> '
 
 export PERL_LOCAL_LIB_ROOT="/home/drew/perl5:$PERL_LOCAL_LIB_ROOT";
 export PERL_MB_OPT="--install_base "/home/drew/perl5"";
@@ -44,4 +56,5 @@ export JAVA_HOME="/opt/java";
 export JDK_HOME="/opt/java";
 export STUDIO_HOME="/opt/java";
 export EDITOR="vim";
+
 HISTIGNORE="cd:ls:ll:dir:clear:exit";
