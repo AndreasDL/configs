@@ -5,6 +5,10 @@ backup of my dot files used in an arch linux + awesomeWM setup
 
 Uses
 
+slim
+
+* arch-tetra 
+
 awesome
 
 * xcompmgr
@@ -14,7 +18,6 @@ urxvt
 
 * Uses the Anonymouns Pro fonts, [found here](http://www.marksimonson.com/fonts/view/anonymous-pro)
 Or in the [AUR](https://aur.archlinux.org/packages/ttf-anonymous-pro/)
-
 
 xbindkeys
 

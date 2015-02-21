@@ -25,9 +25,8 @@ alias playfirst='mplayer "$(ls | head -n 1)"'
 alias rmfirst='rm -i "$(ls | head -n 1)"'
 
 alias orion='ssh user@orion'
-
-alias hblock='sudo cp /etc/hosts.block /etc/hosts'
-alias hublock='cat /etc/hosts | head -n 12 | sudo tee /etc/hosts'
+alias berrypi='ssh pi@berrypi'
+alias designRoot='ssh andlille@student-design4.intec.ugent.be'
 
 # Epoch time conversion
 epoch() {
