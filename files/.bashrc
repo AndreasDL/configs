@@ -27,6 +27,7 @@ alias rmfirst='rm -i "$(ls | head -n 1)"'
 alias orion='ssh user@orion'
 alias berrypi='ssh pi@berrypi'
 alias designRoot='ssh andlille@student-design4.intec.ugent.be'
+alias designUser='ssh user@student-design4.intec.ugent.be'
 
 # Epoch time conversion
 epoch() {
