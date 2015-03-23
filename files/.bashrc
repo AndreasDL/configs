@@ -58,3 +58,5 @@ export STUDIO_HOME="/opt/java";
 export EDITOR="vim";
 
 HISTIGNORE="cd:ls:ll:dir:clear:exit";
+export MOZILLA_FIVE_HOME=/usr/lib/mozilla;
+export ANDROID_NDK=/opt/android-ndk;

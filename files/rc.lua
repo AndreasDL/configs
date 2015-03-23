@@ -179,7 +179,7 @@ end
 
 -- configuration - edit to your liking
 wp_index = 1
-wp_timeout  = 123
+wp_timeout  = 257
 wp_path = "/usr/share/awesome/themes/custom/backgrounds/"
 wp_filter = function(s) return string.match(s,"%.png$") or string.match(s,"%.jpg$") end
 wp_files = scandir(wp_path, wp_filter)
@@ -361,6 +361,10 @@ globalkeys = awful.util.table.join(
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
     awful.key({ modkey            }, "e",      function () awful.util.spawn(terminal) end),
+    -- Custom programs
+    awful.key({ modkey, "Control" }, "c", function () awful.util.spawn("chromium") end),
+    awful.key({ modkey, "Control" }, "s", function () awful.util.spawn("subl3") end),
+    awful.key({ modkey, "Control" }, "t", function () awful.util.spawn("thunar") end),
       -- body
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit),
@@ -585,5 +589,6 @@ end
 battimer = timer({timeout = 30})
 battimer:connect_signal("timeout", bat_notification)
 battimer:start()
+
 
 -- end here for battery warning
