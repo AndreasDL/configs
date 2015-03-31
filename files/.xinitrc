@@ -13,6 +13,8 @@ fi
 
 #services
 xbindkeys
+numlockx &
+
 
 # exec gnome-session
 # exec startkde

@@ -5,6 +5,7 @@ rm -rf files/*;
 
 #progs configs
 cp -v  /home/drew/.bashrc 						files/; #bash
+cp -v  /home/drew/.zshrc						files/; #zsh
 cp -v  /home/drew/.xinitrc 						files/; #xinit
 cp -v  /home/drew/.screenrc						files/; #screen
 cp -v  /home/drew/.vimrc						files/; #vim
