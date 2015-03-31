@@ -8,8 +8,10 @@ bindkey -e
 zstyle :compinstall filename '/home/drew/.zshrc'
 
 autoload -Uz compinit
-autoload -U promptinit
 compinit
+autoload -U promptinit
+promptinit
+prompt adam2
 # End of lines added by compinstall
 
 
