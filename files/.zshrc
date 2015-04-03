@@ -7,18 +7,47 @@ bindkey -e
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/drew/.zshrc'
 
+# autocomplete
 autoload -Uz compinit
 compinit
+
+# set prompt
 autoload -U promptinit
 promptinit
 prompt adam2
-# End of lines added by compinstall
 
+#fish syntax highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# remember last directories
+DIRSTACKFILE="$HOME/.cache/zsh/dirs"
+if [[ -f $DIRSTACKFILE ]] && [[ $#dirstack -eq 0 ]]; then
+  dirstack=( ${(f)"$(< $DIRSTACKFILE)"} )
+  [[ -d $dirstack[1] ]] && cd $dirstack[1]
+fi
+chpwd() {
+  print -l $PWD ${(u)dirstack} >$DIRSTACKFILE
+}
+
+DIRSTACKSIZE=20
+setopt autopushd pushdsilent pushdtohome
+## Remove duplicate entries
+setopt pushdignoredups
+## This reverts the +/- operators.
+setopt pushdminus
+
+#-----------------------------
+# Dircolors
+#-----------------------------
+LS_COLORS='rs=0:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:tw=30;42:ow=34;42:st=37;44:ex=01;32:';
+export LS_COLORS
 
 # Aliases
-alias ls='ls --color=never'
-alias ll='ls -lh'
-alias lla='ll -a'
+alias ls='ls --color=auto --human-readable --group-directories-first --classify'
+alias ll='ls -lh --color=auto --human-readable --group-directories-first --classify'
+alias lla='ll -ahl --color=auto --group-directories-first --classify'
+alias rcp='rsync -v --progress'
+alias rmv='rsync -v --progress --remove-source-files'
 
 alias pacClean='paccache -r; paccache -ruk0;sudo pacman -Rns $(pacman -Qqtd);sudo pacman-optimize && sync;'
 alias cls='reset && clear'; #clear everything including scroll
@@ -41,13 +70,12 @@ alias designRoot='ssh andlille@student-design4.intec.ugent.be'
 alias designUser='ssh user@student-design4.intec.ugent.be'
 
 export EDITOR="vim";
+export BROWSER="chromium";
 
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
 typeset -A key
-
 key[Home]=${terminfo[khome]}
-
 key[End]=${terminfo[kend]}
 key[Insert]=${terminfo[kich1]}
 key[Delete]=${terminfo[kdch1]}
