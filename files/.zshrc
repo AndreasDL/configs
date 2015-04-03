@@ -61,8 +61,8 @@ alias suspend='xscreensaver-command -lock;systemctl suspend'
 alias hybrid-sleep='xscreensaver-command -lock;systemctl hybrid-sleep'
 
 alias rtorrent='screen rtorrent'
-alias playfirst='mplayer "$(ls | head -n 1)"'
-alias rmfirst='rm -i "$(ls | head -n 1)"'
+alias playfirst='bash -c "mplayer $(dir | head -n 1)"'
+alias rmfirst='bash -c "rm -i $(dir | head -n 1)"'
 
 alias orion='ssh user@orion'
 alias berrypi='ssh pi@berrypi'
