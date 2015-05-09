@@ -93,7 +93,7 @@ end
 -- {{{ Menu
 -- Create a laucher widget and a main menu
 myawesomemenu = {
-   { "manual", terminal .. " -e man awesome" },
+   { "manual", terminal .. " -e man awesome " },
    { "edit config", editor_cmd .. " " .. awesome.conffile },
    { "restart", awesome.restart },
    { "quit", awesome.quit }
@@ -482,7 +482,8 @@ awful.rules.rules = {
     { rule = { class = "gimp" },
       properties = { floating = true } },
     -- Set Firefox to always map on tags number 5 of screen 1.
-    { rule = { class = "Firefox" },   properties = { tag = tags[1][5] } }
+    { rule = { class = "Firefox"  }, properties = { tag = tags[1][5] } },
+    { rule = { instance = "urxvt" }, properties = { floating = true, ontop = true, width = 700, height = 200} }
 }
 -- }}}
 
