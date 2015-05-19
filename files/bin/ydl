@@ -5,8 +5,8 @@ x=/tmp/.youtube-dl-$(date +%y.%m.%d_%H.%M.%S)-$RANDOM.flv
 youtube-dl --output=$x "$1"
 
 #convert & remove flv
-ffmpeg -i $x -acodec libmp3lame -ac 2 -ab 320k -vn -y "$2.mp3"
-rm $x
+ffmpeg -i "$x.mp4" -acodec libmp3lame -ac 2 -ab 320k -vn -y "$2.mp3"
+rm /tmp/.youtube-dl* ;
 
 #set tags
 echo "Song name: $2 Artist: $3";

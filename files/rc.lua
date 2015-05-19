@@ -480,10 +480,10 @@ awful.rules.rules = {
     { rule = { class = "pinentry" },
       properties = { floating = true } },
     { rule = { class = "gimp" },
-      properties = { floating = true } },
+      properties = { floating = true , ontop = true} },
     -- Set Firefox to always map on tags number 5 of screen 1.
     { rule = { class = "Firefox"  }, properties = { tag = tags[1][5] } },
-    { rule = { instance = "urxvt" }, properties = { floating = true, ontop = true, width = 700, height = 200} }
+    --{ rule = { instance = "urxvt" }, properties = { floating = true, ontop = true, width = 700, height = 200} }
 }
 -- }}}
 
