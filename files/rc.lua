@@ -122,11 +122,11 @@ end
 --cpuwidget
 
 cputext = wibox.widget.textbox()
-vicious.register(cputext,vicious.widgets.cpu," Cpu: $1% [cpu0: $2% cpu1: $3% cpu2: $4% cpu3: $5%] | ", 2)
+vicious.register(cputext,vicious.widgets.cpu," Cpu: $1% { $2% | $3% | $4% | $5% } | ", 2)
 
 --memory widget
 memwidget = wibox.widget.textbox()
-vicious.register(memwidget,vicious.widgets.mem, "Mem:$2M ($1%) | " , 43)
+vicious.register(memwidget,vicious.widgets.mem, "Mem: $2M ($1%) | " , 43)
 --" | Mem:$2M / $3M ($1%) |")
 
 --battery widget
