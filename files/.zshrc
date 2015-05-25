@@ -57,4 +57,4 @@ export EDITOR='vim'
 
 # aliases
 source  $HOME/.aliases
-setopt APPEND_HISTORY
+setopt no_share_history
