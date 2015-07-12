@@ -1,8 +1,6 @@
 # Aliases
 alias ll='ls -lh --color=auto --human-readable --group-directories-first'
 alias lla='ll -ahl --color=auto --group-directories-first'
-alias rcp='rsync -v --progress'
-alias rmv='rsync -v --progress --remove-source-files'
 
 alias pacClean='paccache -r; paccache -ruk0;sudo pacman -Rns $(pacman -Qqtd);sudo pacman-optimize && sync;'
 alias pacMirror='sudo cp -v /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak;sudo reflector --verbose -l 50 -p http --sort rate --save /etc/pacman.d/mirrorlist'
@@ -24,8 +22,8 @@ alias orion='ssh user@orion'
 alias berrypi='ssh pi@berrypi'
 alias orionSep='ssh user@orionSep'
 
-alias designRoot='ssh andlille@student-design4.intec.ugent.be'
-alias designUser='ssh user@student-design4.intec.ugent.be'
-
 alias apup='sudo create_ap -m nat wlp0s20u4 wlo1 test abcdefghijklmnop'
 #sudo mount -t cifs \\\\files.ugent.be\\andlille /mnt/card1 -o user=andlille 
+
+alias ranger='urxvt --depth 0 -e ranger &'
+alias rs='rsync -rahv --progress --partial'

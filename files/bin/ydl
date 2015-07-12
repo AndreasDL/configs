@@ -1,13 +1,10 @@
-#dir voor flv
-x=/tmp/.youtube-dl-$(date +%y.%m.%d_%H.%M.%S)-$RANDOM.flv
+#get filename
+NAME="$(youtube-dl --get-id "$1").mp3";
 
-#download
-youtube-dl --output=$x "$1"
+#download as mp3
+youtube-dl --extract-audio --audio-format mp3 --id --restrict-filenames "$1";
 
-#convert & remove flv
-ffmpeg -i "$x.mp4" -acodec libmp3lame -ac 2 -ab 320k -vn -y "$2.mp3"
-rm /tmp/.youtube-dl* ;
+echo "name: $2 Artist: $3";
+id3v2 -a "$3" -t "$2" $NAME;
 
-#set tags
-echo "Song name: $2 Artist: $3";
-id3v2 -a "$3" -t "$2" "$2.mp3"
+mv "$NAME" "$2 - $3.mp3";
