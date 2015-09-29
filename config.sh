@@ -6,17 +6,18 @@ rm -rf files/*;
 #progs configs
 cp -vx  /home/drew/.bashrc 						files/; #bash
 cp -vx  /home/drew/.zshrc						files/; #zsh
-cp -vx  /home/drew/.aliases					    files/;
-cp -vx  /home/drew/.xinitrc 					files/; #xinit
-cp -vx  /home/drew/.screenrc				    files/; #screen
+cp -vx  /home/drew/.aliases					    files/; #aliases
+cp -vx  /home/drew/.gdbinit						files/; #gdb config
+cp -vx  /home/drew/.xinitrc 						files/; #xinit
+cp -vx  /home/drew/.screenrc				    	files/; #screen
 cp -vx  /home/drew/.vimrc						files/; #vim
 cp -vrx /home/drew/.vim							files/.vim;
-cp -vx  /home/drew/.rtorrent.rc 				files/; #rtorrent
+cp -vx  /home/drew/.rtorrent.rc 					files/; #rtorrent
 cp -vx  /home/drew/.Xdefaults					files/; #urxvt
 cp -vx  /home/drew/.xbindkeysrc					files/; #xbindkyes for volume keys
-cp -vx  /home/drew/.xscreensaver				files/; #screensaver
+cp -vx  /home/drew/.xscreensaver					files/; #screensaver
 cp -vx  /home/drew/.gtkrc-2.0					files/; #gtk theme
-cp -vx  /home/drew/.asoundrc					files/; #alsa & sound config
+cp -vx  /home/drew/.asoundrc						files/; #alsa & sound config
 
 #system configs
 cp -vx  /etc/systemd/logind.conf     			files/; #lid closed actions etc

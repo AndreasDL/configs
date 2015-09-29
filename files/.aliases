@@ -22,8 +22,11 @@ alias orion='ssh user@orion'
 alias berrypi='ssh pi@berrypi'
 alias orionSep='ssh user@orionSep'
 
-alias apup='sudo create_ap -m nat wlp0s20u4 wlo1 test abcdefghijklmnop'
-#sudo mount -t cifs \\\\files.ugent.be\\andlille /mnt/card1 -o user=andlille 
+alias apup='sudo create_ap -m nat wlp0s20u4 wlo1 AwesomeAP abcdefghijklmnop'
+#sudo mount -t cifs \\\\files.ugent.be\\andlille /mnt/card1 -o user=...#,password=....
+#smbclient "//files.ugent.be/andlille" -U andlille
+#dir, cd home, dir, "put local_file remote_file"
+#/opt/Citrix/ICAClient/wfica launch.ica 
 
 alias ranger='urxvt --depth 0 -e ranger &'
 alias rs='rsync -rahv --progress --partial'

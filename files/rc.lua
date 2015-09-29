@@ -364,6 +364,7 @@ globalkeys = awful.util.table.join(
     -- Custom programs
     awful.key({ modkey, "Control" }, "c", function () awful.util.spawn("chromium") end),
     awful.key({ modkey, "Control" }, "s", function () awful.util.spawn("subl3") end),
+
     awful.key({ modkey, "Control" }, "t", function () awful.util.spawn("thunar") end),
       -- body
     awful.key({ modkey, "Control" }, "r", awesome.restart),
@@ -484,7 +485,7 @@ awful.rules.rules = {
       properties = { floating = true , ontop = true} },
     -- Set Firefox to always map on tags number 5 of screen 1.
     { rule = { class = "Firefox"  }, properties = { tag = tags[1][5] } },
-    --{ rule = { instance = "urxvt" }, properties = { floating = true, ontop = true, width = 700, height = 200} }
+    --{ rule = { instance = "urxvt" }, properties = { floating = true, ontop = true, width = 650, height = 150, x = 1200 , y = 900 } }
 }
 -- }}}
 

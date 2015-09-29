@@ -14,6 +14,8 @@ fi
 #services
 xbindkeys
 numlockx &
+redshift &
+
 
 
 # exec gnome-session
