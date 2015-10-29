@@ -18,6 +18,7 @@ cp -vx  /home/drew/.xbindkeysrc					files/; #xbindkyes for volume keys
 cp -vx  /home/drew/.xscreensaver					files/; #screensaver
 cp -vx  /home/drew/.gtkrc-2.0					files/; #gtk theme
 cp -vx  /home/drew/.asoundrc						files/; #alsa & sound config
+cp -vx  /home/drew/.oh-my-zsh/					files; #zsh stuffz
 
 #system configs
 cp -vx  /etc/systemd/logind.conf     			files/; #lid closed actions etc

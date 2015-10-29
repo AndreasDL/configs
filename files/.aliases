@@ -15,14 +15,14 @@ alias suspend='xscreensaver-command -lock;systemctl suspend'
 alias hybrid-sleep='xscreensaver-command -lock;systemctl hybrid-sleep'
 
 alias rtorrent='screen rtorrent'
-alias playfirst='mplayer "$(ls | head -n 1)"'
+alias playfirst='mplayer -af scaletempo "$(ls | head -n 1)"'
 alias rmfirst='rm -i "$(ls | head -n 1)"'
 
 alias orion='ssh user@orion'
 alias berrypi='ssh pi@berrypi'
 alias orionSep='ssh user@orionSep'
 
-alias apup='sudo create_ap -m nat wlp0s20u4 wlo1 AwesomeAP abcdefghijklmnop'
+alias apup='sudo create_ap -m nat wlp0s20u2 wlo1 AwesomeAP abcdefghijklmnop'
 #sudo mount -t cifs \\\\files.ugent.be\\andlille /mnt/card1 -o user=...#,password=....
 #smbclient "//files.ugent.be/andlille" -U andlille
 #dir, cd home, dir, "put local_file remote_file"
