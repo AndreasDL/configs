@@ -30,3 +30,5 @@ alias apup='sudo create_ap -m nat wlp0s20u2 wlo1 AwesomeAP abcdefghijklmnop'
 
 alias ranger='urxvt --depth 0 -e ranger &'
 alias rs='rsync -rahv --progress --partial'
+
+alias pipup='pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo pip install -U'
