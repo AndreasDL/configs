@@ -14,7 +14,7 @@ alias hibernate='xscreensaver-command -lock;systemctl hibernate'
 alias suspend='xscreensaver-command -lock;systemctl suspend'
 alias hybrid-sleep='xscreensaver-command -lock;systemctl hybrid-sleep'
 
-alias rtorrent='screen rtorrent'
+#alias rtorrent='screen rtorrent'
 alias playfirst='mplayer -af scaletempo "$(ls | head -n 1)"'
 alias rmfirst='rm -i "$(ls | head -n 1)"'
 

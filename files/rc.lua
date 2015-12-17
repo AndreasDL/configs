@@ -484,7 +484,7 @@ awful.rules.rules = {
     { rule = { class = "gimp" },
       properties = { floating = true , ontop = true} },
     -- Set Firefox to always map on tags number 5 of screen 1.
-    { rule = { class = "Firefox"  }, properties = { tag = tags[1][5] } },
+--    { rule = { class = "Firefox"  }, properties = { tag = tags[1][5] } },
     --{ rule = { instance = "urxvt" }, properties = { floating = true, ontop = true, width = 650, height = 150, x = 1200 , y = 900 } }
 }
 -- }}}
@@ -576,7 +576,7 @@ local function bat_notification()
   local bat_capacity = tonumber(f_capacity:read("*all"))
   local bat_status = trim(f_status:read("*all"))
 
-  if (bat_capacity <= 10 and bat_status == "Discharging") then
+  if (bat_capacity <= 15 and bat_status == "Discharging") then
     naughty.notify({ title      = "Battery Warning"
       , text       = "Battery low! " .. bat_capacity .."%" .. " left!"
       , fg="#ffffff"
