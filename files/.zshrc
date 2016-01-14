@@ -9,7 +9,7 @@ ZSH_THEME="custom-fino-time"
 #gallois"
 
 # Uncomment the following line to use case-sensitive completion.
-CASE_SENSITIVE="true"
+# CASE_SENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -59,3 +59,5 @@ export EDITOR='vim'
 # aliases
 source  $HOME/.aliases
 setopt no_share_history
+setopt hist_ignore_space 
+setopt hist_ignore_dups

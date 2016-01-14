@@ -17,6 +17,7 @@ alias hybrid-sleep='xscreensaver-command -lock;systemctl hybrid-sleep'
 #alias rtorrent='screen rtorrent'
 alias playfirst='mplayer -af scaletempo "$(ls | head -n 1)"'
 alias rmfirst='rm -i "$(ls | head -n 1)"'
+alias mplayer='mplayer -af scaletempo'
 
 alias orion='ssh user@orion'
 alias berrypi='ssh pi@berrypi'
