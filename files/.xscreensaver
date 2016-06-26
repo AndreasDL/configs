@@ -1,6 +1,6 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.29 for drew on Wed Sep  3 23:56:36 2014.
-# http://www.jwz.org/xscreensaver/
+# Written by xscreensaver-demo 5.35 for drew on Sun Jun 26 12:57:56 2016.
+# https://www.jwz.org/xscreensaver/
 
 timeout:	12:00:00
 cycle:		0:02:00
@@ -80,7 +80,7 @@ programs:								      \
 -				moire -root				    \n\
 - GL: 				morph3d -root				    \n\
 -				mountain -root				    \n\
--				munch -root				    \n\
+				munch -root				    \n\
 -				penrose -root				    \n\
 - GL: 				pipes -root				    \n\
 -				rd-bomb -root				    \n\
@@ -113,14 +113,14 @@ programs:								      \
 - GL: 				stairs -root				    \n\
 -				truchet -root				    \n\
 -				vidwhacker -root			    \n\
--				blaster -root				    \n\
+				blaster -root				    \n\
 -				bumps -root				    \n\
 -				ccurve -root				    \n\
 -				compass -root				    \n\
 -				deluxe -root				    \n\
 -				demon -root				    \n\
 - GL: 				extrusion -root				    \n\
-				loop -root				    \n\
+-				loop -root				    \n\
 				penetrate -root				    \n\
 -				petri -root				    \n\
 -				phosphor -root				    \n\
@@ -129,14 +129,14 @@ programs:								      \
 -				shadebobs -root				    \n\
 - GL: 				sierpinski3d -root			    \n\
 -				spotlight -root				    \n\
--				squiral -root				    \n\
+				squiral -root				    \n\
 -				wander -root				    \n\
 -				webcollage -root			    \n\
 -				xflame -root				    \n\
 -				xmatrix -root				    \n\
 - GL: 				gflux -root				    \n\
 -				nerverot -root				    \n\
-				xrayswarm -root				    \n\
+-				xrayswarm -root				    \n\
 -				xspirograph -root			    \n\
 - GL: 				circuit -root				    \n\
 - GL: 				dangerball -root			    \n\
@@ -150,7 +150,7 @@ programs:								      \
 -				speedmine -root				    \n\
 - GL: 				starwars -root				    \n\
 - GL: 				stonerview -root			    \n\
--				vermiculate -root			    \n\
+				vermiculate -root			    \n\
 				whirlwindwarp -root			    \n\
 -				zoom -root				    \n\
 -				anemone -root				    \n\
@@ -159,7 +159,7 @@ programs:								      \
 - GL: 				cubenetic -root				    \n\
 - GL: 				endgame -root				    \n\
 -				euler2d -root				    \n\
-				fluidballs -root			    \n\
+-				fluidballs -root			    \n\
   GL: 				flurry -root				    \n\
 - GL: 				glblur -root				    \n\
 - GL: 				glsnake -root				    \n\
@@ -202,7 +202,7 @@ programs:								      \
 -				abstractile -root			    \n\
 -				anemotaxis -root			    \n\
 - GL: 				antinspect -root			    \n\
-				fireworkx -root				    \n\
+-				fireworkx -root				    \n\
 -				fuzzyflakes -root			    \n\
 				interaggregate -root			    \n\
 -				intermomentary -root			    \n\
@@ -252,6 +252,17 @@ programs:								      \
 - GL: 				unknownpleasures -root			    \n\
 - GL: 				projectiveplane -root			    \n\
 -				tessellimage -root			    \n\
+-				binaryring -root			    \n\
+- GL: 				cityflow -root				    \n\
+- GL: 				geodesicgears -root			    \n\
+- GL: 				romanboy -root				    \n\
+- GL: 				winduprobot -root			    \n\
+- GL: 				splitflap -root				    \n\
+- GL: 				dymaxionmap -root			    \n\
+- GL: 				energystream -root			    \n\
+- GL: 				hydrostat -root				    \n\
+- GL: 				raverhoop -root				    \n\
+- GL: 				unicrud -root				    \n\
 
 
 pointerPollTime:    0:00:05
@@ -262,4 +273,5 @@ GetViewPortIsFullOfLies:False
 procInterrupts:	True
 xinputExtensionDev: False
 overlayStderr:	True
+authWarningSlack:   20
 

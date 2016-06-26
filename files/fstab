@@ -1,14 +1,11 @@
-# /dev/sdb8
-UUID=96b6d054-bb64-4071-8f15-3e7978ee353f	/         	ext4      	rw,relatime,data=ordered	0 1
+# /dev/sdb6
+UUID=d1bdacb1-ce6d-43fc-b841-0890e13c2ef8	/         	ext4      	rw,relatime,data=ordered	0 1
 
-# /dev/sdb2
-UUID=449F-D911      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro	0 2
+# /dev/sdb1 LABEL=SYSTEM
+UUID=3220-536A      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro	0 2
 
-# /dev/sdb7
-UUID=a88f3db3-d7f5-451d-b339-41e8f34347f0	none      	swap      	defaults  	0 0
+# /dev/sdb5
+UUID=f27aa092-2f59-48fb-8fe3-fb9e00f44066	none      	swap      	defaults  	0 0
 
-# /dev/sda5
-UUID="0C780C94780C7F28"	/mnt/data	ntfs-3g	defaults,nofail	0	0
-
-# /dev/sda4
-UUID="7054234654230E82"	/mnt/windows	ntfs-3g	defaults,nofail	0	0
+# /dev/sda1
+UUID=F04CA3434CA30406 /mnt/hd ntfs-3g	defaults,nofail	0	0

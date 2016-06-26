@@ -16,6 +16,7 @@ xbindkeys
 numlockx &
 redshift &
 
+xset m 3/2 0 #mouse speedup
 
 
 # exec gnome-session

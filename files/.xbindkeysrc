@@ -1,13 +1,16 @@
-#Laptop
-"amixer -c 1 set Master 5+"
+# Volume
+"amixer set Master 5+"
   Mod2 + XF86AudioRaiseVolume
 
-"amixer -c 1 set Master 5-"
+"amixer set Master 5-"
   Mod2 + XF86AudioLowerVolume
 
-"amixer -D pulse set Master 1+ toggle"
+"amixer sset Master toggle"
   XF86AudioMute
 
+
+
+# Next, prev, play
 "playerctl next"
   Mod2 + XF86AudioNext
 
@@ -17,9 +20,20 @@
 "playerctl previous"
   Mod2 + XF86AudioPrev
 
-"xbacklight -inc 5 -time 0 -steps 1"
-  Mod2 + XF86MonBrightnessUp
 
-"xbacklight -dec 5 -time 0 -steps 1"
-  Mod2 + XF86MonBrightnessDown
 
+# Keybrightness
+"asus-kbd-backlight up"
+  Mod2 + XF86KbdBrightnessUp
+
+"asus-kbd-backlight down"
+  Mod2 + XF86KbdBrightnessDown
+
+
+
+# Screen brightness
+"xbacklight -inc 10 -time 0 -steps 1"
+  Mod4 + F6
+
+"xbacklight -dec 10 -time 0 -steps 1"
+  Mod4 + F5
