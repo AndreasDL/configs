@@ -33,3 +33,4 @@ alias ranger='urxvt --depth 0 -e ranger &'
 alias rs='rsync -rahv --progress --partial'
 
 alias wol='wol "9c:b6:54:06:6c:7b"'
+alias fixkey='asus-kbd-backlight allowusers'
