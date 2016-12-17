@@ -33,4 +33,6 @@ alias ranger='urxvt --depth 0 -e ranger &'
 alias rs='rsync -rahv --progress --partial'
 
 alias wol='wol "9c:b6:54:06:6c:7b"'
-alias fixkey='asus-kbd-backlight allowusers'
+alias fixkey='sudo asus-kbd-backlight allowusers'
+
+alias restartNetwork='sudo netctl restart $(netctl list | grep "*" | cut -d " "  -f 2 )'

@@ -5,6 +5,6 @@ NAME="$(youtube-dl --get-id "$1").mp3";
 youtube-dl --extract-audio --audio-format mp3 --id --restrict-filenames "$1";
 
 echo "name: $2 Artist: $3";
-id3v2 -a "$3" -t "$2" $NAME;
+id3v2 -a "$3" -t "$2" "./$NAME";
 
-mv "$NAME" "$2 - $3.mp3";
+mv "./$NAME" "$2 - $3.mp3";
