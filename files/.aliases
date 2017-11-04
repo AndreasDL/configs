@@ -6,8 +6,8 @@ alias pacClean='paccache -r; paccache -ruk0;sudo pacman -Rns $(pacman -Qqtd);sud
 alias pacMirror='sudo cp -v /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak;sudo reflector --verbose -l 50 -p http --sort rate --save /etc/pacman.d/mirrorlist'
 alias cls='reset && clear'; #clear everything including scroll
 
-alias dualscreen='xrandr --output eDP1 --auto --output HDMI1 --auto --right-of eDP1'
-alias singlescreen='xrandr --output eDP1 --auto --output HDMI1 --off'
+alias dualscreen='xrandr --output eDP1 --auto --output HDMI-1 --auto --right-of eDP1'
+alias singlescreen='xrandr --output eDP1 --auto --output HDMI-1 --off'
 
 alias lock='xscreensaver-command -lock'
 alias hibernate='xscreensaver-command -lock;systemctl hibernate'
@@ -20,14 +20,8 @@ alias rmfirst='rm -i "$(ls | head -n 1)"'
 alias mplayer='mplayer -af scaletempo'
 
 alias orion='ssh user@orion'
-alias berrypi='ssh pi@berrypi'
-alias orionSep='ssh user@orionSep'
 
 alias apup='sudo create_ap -m nat wlp0s20u2 wlo1 AwesomeAP abcdefghijklmnop'
-#sudo mount -t cifs \\\\files.ugent.be\\andlille /mnt/card1 -o user=...#,password=....
-#smbclient "//files.ugent.be/andlille" -U andlille
-#dir, cd home, dir, "put local_file remote_file"
-#/opt/Citrix/ICAClient/wfica launch.ica 
 
 alias ranger='urxvt --depth 0 -e ranger &'
 alias rs='rsync -rahv --progress --partial'

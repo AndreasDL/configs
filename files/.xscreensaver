@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.35 for drew on Thu Aug  4 11:21:58 2016.
+# Written by xscreensaver-demo 5.37 for drew on Sat Nov  4 11:54:20 2017.
 # https://www.jwz.org/xscreensaver/
 
 timeout:	12:00:00
@@ -67,7 +67,7 @@ programs:								      \
 -				braid -root				    \n\
 -				coral -root				    \n\
 -				deco -root				    \n\
--				drift -root				    \n\
+				drift -root				    \n\
 -				fadeplot -root				    \n\
 -				galaxy -root				    \n\
 -				goop -root				    \n\
@@ -80,7 +80,7 @@ programs:								      \
 -				moire -root				    \n\
 - GL: 				morph3d -root				    \n\
 -				mountain -root				    \n\
-				munch -root				    \n\
+-				munch -root				    \n\
 -				penrose -root				    \n\
 - GL: 				pipes -root				    \n\
 -				rd-bomb -root				    \n\
@@ -118,7 +118,7 @@ programs:								      \
 -				ccurve -root				    \n\
 -				compass -root				    \n\
 -				deluxe -root				    \n\
--				demon -root				    \n\
+				demon -root				    \n\
 - GL: 				extrusion -root				    \n\
 -				loop -root				    \n\
 				penetrate -root				    \n\
@@ -129,7 +129,7 @@ programs:								      \
 -				shadebobs -root				    \n\
 - GL: 				sierpinski3d -root			    \n\
 -				spotlight -root				    \n\
-				squiral -root				    \n\
+-				squiral -root				    \n\
 -				wander -root				    \n\
 -				webcollage -root			    \n\
 -				xflame -root				    \n\
@@ -150,8 +150,8 @@ programs:								      \
 -				speedmine -root				    \n\
 - GL: 				starwars -root				    \n\
 - GL: 				stonerview -root			    \n\
-				vermiculate -root			    \n\
-				whirlwindwarp -root			    \n\
+-				vermiculate -root			    \n\
+-				whirlwindwarp -root			    \n\
 -				zoom -root				    \n\
 -				anemone -root				    \n\
 -				apollonian -root			    \n\
@@ -160,7 +160,7 @@ programs:								      \
 - GL: 				endgame -root				    \n\
 -				euler2d -root				    \n\
 -				fluidballs -root			    \n\
-  GL: 				flurry -root				    \n\
+- GL: 				flurry -root				    \n\
 - GL: 				glblur -root				    \n\
 - GL: 				glsnake -root				    \n\
 -				halftone -root				    \n\
@@ -199,8 +199,8 @@ programs:								      \
 -				popsquares -root			    \n\
 - GL: 				surfaces -root				    \n\
 -				xanalogtv -root				    \n\
--				abstractile -root			    \n\
--				anemotaxis -root			    \n\
+				abstractile -root			    \n\
+				anemotaxis -root			    \n\
 - GL: 				antinspect -root			    \n\
 -				fireworkx -root				    \n\
 -				fuzzyflakes -root			    \n\
@@ -252,7 +252,7 @@ programs:								      \
 - GL: 				unknownpleasures -root			    \n\
 - GL: 				projectiveplane -root			    \n\
 -				tessellimage -root			    \n\
--				binaryring -root			    \n\
+				binaryring -root			    \n\
 - GL: 				cityflow -root				    \n\
 - GL: 				geodesicgears -root			    \n\
 - GL: 				romanboy -root				    \n\
@@ -263,6 +263,12 @@ programs:								      \
 - GL: 				hydrostat -root				    \n\
 - GL: 				raverhoop -root				    \n\
 - GL: 				unicrud -root				    \n\
+- GL: 				cubestack -root				    \n\
+- GL: 				cubetwist -root				    \n\
+- GL: 				discoball -root				    \n\
+- GL: 				hexstrut -root				    \n\
+- GL: 				splodesic -root				    \n\
+- GL: 				vigilance -root				    \n\
 
 
 pointerPollTime:    0:00:05

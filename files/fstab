@@ -1,11 +1,16 @@
-# /dev/sdb6
-UUID=d1bdacb1-ce6d-43fc-b841-0890e13c2ef8	/         	ext4      	rw,relatime,data=ordered	0 1
+# 
+# /etc/fstab: static file system information
+#
+# <file system>	<dir>	<type>	<options>	<dump>	<pass>
+# /dev/sdb3
+UUID=89dba3c7-2006-45ee-9964-599cc18172b5	/         	ext4      	rw,relatime,data=ordered	0 1
 
 # /dev/sdb1 LABEL=SYSTEM
 UUID=3220-536A      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro	0 2
 
-# /dev/sdb5
-UUID=f27aa092-2f59-48fb-8fe3-fb9e00f44066	none      	swap      	defaults  	0 0
-
 # /dev/sda1
-UUID=F04CA3434CA30406 /mnt/hd ntfs-3g	defaults,nofail	0	0
+UUID=4021d629-ecff-4848-9f3c-b18cdc5265f2	/mnt/data 	ext4      	rw,relatime,data=ordered	0 2
+
+# /dev/sdb2
+UUID=dc204805-90b7-4b2f-9750-6966710e4ed5	none      	swap      	defaults  	0 0
+

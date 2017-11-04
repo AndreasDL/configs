@@ -1,7 +1,7 @@
-download_rate = 1000
-upload_rate = 100
+download_rate = 4096
+upload_rate = 1024
 
-directory = /mnt/hd/done/
+directory = /mnt/data/done/
 session = /home/drew/.session/
 
 schedule = low_diskspace,5,60,close_low_diskspace=100M
