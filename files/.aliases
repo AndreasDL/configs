@@ -30,3 +30,4 @@ alias wol='wol "9c:b6:54:06:6c:7b"'
 alias fixkey='sudo asus-kbd-backlight allowusers'
 
 alias restartNetwork='sudo netctl restart $(netctl list | grep "*" | cut -d " "  -f 2 )'
+alias updateTime='sudo ntpd -gq'
