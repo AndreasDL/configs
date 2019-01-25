@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/mnt/data/code/configs'
-let g:netrw_dirhist_2='/home/drew/.vim'
-let g:netrw_dirhist_3='/home/drew/.vim/colors'
-let g:netrw_dirhist_4='/srv/http/octopress/source/_includes'
-let g:netrw_dirhist_5='/home/drew/.oh-my-zsh'

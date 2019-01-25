@@ -1,33 +1,6 @@
-# Aliases
 alias ll='ls -lh --color=auto --human-readable --group-directories-first'
 alias lla='ll -ahl --color=auto --group-directories-first'
 
-alias pacClean='paccache -r; paccache -ruk0;sudo pacman -Rns $(pacman -Qqtd);sudo pacman-optimize && sync;'
-alias pacMirror='sudo cp -v /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak;sudo reflector --verbose -l 50 -p http --sort rate --save /etc/pacman.d/mirrorlist'
-alias cls='reset && clear'; #clear everything including scroll
+alias actli='export PATH="/home/gebruiker/miniconda3/bin:$PATH" && source activate iStreet_lidar_production'
 
-alias dualscreen='xrandr --output eDP1 --auto --output HDMI-1 --auto --right-of eDP1'
-alias singlescreen='xrandr --output eDP1 --auto --output HDMI-1 --off'
-
-alias lock='xscreensaver-command -lock'
-alias hibernate='xscreensaver-command -lock;systemctl hibernate'
-alias suspend='xscreensaver-command -lock;systemctl suspend'
-alias hybrid-sleep='xscreensaver-command -lock;systemctl hybrid-sleep'
-
-#alias rtorrent='screen rtorrent'
-alias playfirst='mplayer -af scaletempo "$(ls | head -n 1)"'
-alias rmfirst='rm -i "$(ls | head -n 1)"'
-alias mplayer='mplayer -af scaletempo'
-
-alias orion='ssh user@orion'
-
-alias apup='sudo create_ap -m nat wlp0s20u2 wlo1 AwesomeAP abcdefghijklmnop'
-
-alias ranger='urxvt --depth 0 -e ranger &'
-alias rs='rsync -rahv --progress --partial'
-
-alias wol='wol "9c:b6:54:06:6c:7b"'
-alias fixkey='sudo asus-kbd-backlight allowusers'
-
-alias restartNetwork='sudo netctl restart $(netctl list | grep "*" | cut -d " "  -f 2 )'
-alias updateTime='sudo ntpd -gq'
+alias budo='docker build -t lidar .; docker exec -i -t $(docker run -d -i -v /mnt/lidar:/mnt/lidar -v /mnt/output:/mnt/output -v /mnt/buildings:/mnt/buildings lidar) /bin/bash;'

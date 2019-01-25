@@ -100,3 +100,4 @@ source $ZSH/oh-my-zsh.sh
 #
 source ~/.aliases
 #export PATH="/home/gebruiker/miniconda3/bin:$PATH"
+unsetopt share_history
