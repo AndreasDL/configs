@@ -6,20 +6,24 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
+" add all your plugins here (note older versions of Vundle
+" used Bundle instead of Plugin)
+
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'sickill/vim-monokai'
 Plugin 'vim-scripts/indentpython.vim'
-
-" add all your plugins here (note older versions of Vundle
-" used Bundle instead of Plugin)
-
-" ...
+Plugin 'tell-k/vim-autoflake'
+Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+let g:autoflake_remove_all_unused_imports=1
+let g:autoflake_remove_unused_variables=1
+let g:autoflake_disable_show_diff=1
 
 "colorscheme zenburn
 syntax enable
