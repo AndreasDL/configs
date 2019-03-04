@@ -29,6 +29,7 @@ let g:autoflake_remove_all_unused_imports=1
 let g:autoflake_remove_unused_variables=1
 let g:autoflake_disable_show_diff=1
 
+let g:SimpylFold_fold_import=0
 
 " nerdTree
 map <C-n> :NERDTreeToggle<CR>
@@ -42,3 +43,5 @@ colorscheme monokai
 
 map <C-p> :w<CR>:!python3 %<CR>
 map <C-P> :w<CR>:!python3 -u % \|tee out 2>&1 <CR>
+
+set noswapfile
