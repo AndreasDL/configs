@@ -30,6 +30,7 @@ let g:autoflake_remove_unused_variables=1
 let g:autoflake_disable_show_diff=1
 
 let g:SimpylFold_fold_import=0
+let g:airline#extensions#tabline#enabled = 1
 
 " nerdTree
 map <C-n> :NERDTreeToggle<CR>
