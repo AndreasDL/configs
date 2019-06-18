@@ -14,12 +14,15 @@ Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'sickill/vim-monokai'
 Plugin 'vim-scripts/indentpython.vim'
-Plugin 'tell-k/vim-autoflake'
+"Plugin 'tell-k/vim-autoflake'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Konfekt/FastFold'
 Plugin 'Scrooloose/nerdtree'
 " Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'vim-airline/vim-airline'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'haya14busa/incsearch.vim'
+Plugin 'vim-scripts/securemodelines'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -35,7 +38,6 @@ let g:SimpylFold_fold_import=0
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
-
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -51,11 +53,23 @@ let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeQuitOnOpen = 1
 
+"nerdcommenter
+filetype plugin on
+
 "colorscheme zenburn
 syntax enable
 colorscheme monokai
 
-map <C-p> :w<CR>:!python3 %<CR>
-map <C-P> :w<CR>:!python3 -u % \|tee out 2>&1 <CR>
 
 set noswapfile
+set hlsearch
+
+map <C-p> :wa<CR>:!python3 -u % \|tee out 2>&1 <CR>
+nnoremap gp `[v`]
+imap jj <Esc>
+
+map / <Plug>(incsearch-forward)
+map ? <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
+
