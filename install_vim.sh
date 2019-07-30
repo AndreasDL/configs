@@ -3,7 +3,7 @@ sudo apt install vim git wget
 
 #vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-wget --output-document ~/.vimrc https://raw.githubusercontent.com/AndreasDL/configs/work/.vimrc
+wget --output-document ~/.vimrc https://raw.githubusercontent.com/AndreasDL/configs/work/files/.vimrc
 vim -c PluginInstall
 
 #YCM
