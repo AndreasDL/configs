@@ -4,3 +4,23 @@ alias lla='ll -ahl --color=auto --group-directories-first'
 alias actli='export PATH="/home/gebruiker/miniconda3/bin:$PATH" && source activate iStreet_lidar_production'
 
 alias budo='docker build -t lidar .; docker exec -i -t $(docker run -d -i -v /mnt/lidar:/mnt/lidar -v /mnt/output:/mnt/output -v /mnt/buildings:/mnt/buildings lidar) /bin/bash;'
+
+function getIp(){ #vmname
+	ip=$(az vm show -d -g computing-rg -n $1 --query publicIps -o tsv)
+	if [ ${#ip} -ne 0 ]; then
+		echo "$ip"
+	else
+		echo "$1 is not running"
+	fi
+}
+
+function sshazure() { #vm-name #username (optional)
+	ip=$(az vm show -d -g computing-rg -n $1 --query publicIps -o tsv)
+	if [ $# -eq 2 ]; then
+		echo "ssh ${2}@${ip}"
+		ssh ${2}@${ip}
+	else
+		echo "ssh $ip"
+		ssh $ip
+	fi
+}
