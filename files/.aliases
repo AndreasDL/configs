@@ -1,9 +1,10 @@
 alias ll='ls -lh --color=auto --human-readable --group-directories-first'
 alias lla='ll -ahl --color=auto --group-directories-first'
 
-alias actli='export PATH="/home/gebruiker/miniconda3/bin:$PATH" && source activate iStreet_lidar_production'
-
+alias actli='export PATH="/home/gebruiker/miniconda3/bin:$PATH" && source activate env'
 alias budo='docker build -t lidar .; docker exec -i -t $(docker run -d -i -v /mnt/lidar:/mnt/lidar -v /mnt/output:/mnt/output -v /mnt/buildings:/mnt/buildings lidar) /bin/bash;'
+alias unblob='for d in $(cat /proc/mounts | grep blobfuse | cut -d " " -f 2); do echo "unmounting $d" && sudo umount -l $d; done'
+alias reblob='for d in $(cat /proc/mounts | grep blobfuse | cut -d " " -f 2); do echo "unmounting $d" && sudo umount -l $d; done; sudo ~/mount_azure.sh'
 
 function getIp(){ #vmname
 	ip=$(az vm show -d -g computing-rg -n $1 --query publicIps -o tsv)
@@ -13,9 +14,8 @@ function getIp(){ #vmname
 		echo "$1 is not running"
 	fi
 }
-
 function sshazure() { #vm-name #username (optional)
-	ip=$(az vm show -d -g computing-rg -n $1 --query publicIps -o tsv)
+	ip=$(az vm show -d -g AE-analytics-portmade -n $1 --query publicIps -o tsv)
 	if [ $# -eq 2 ]; then
 		echo "ssh ${2}@${ip}"
 		ssh ${2}@${ip}
@@ -23,4 +23,48 @@ function sshazure() { #vm-name #username (optional)
 		echo "ssh $ip"
 		ssh $ip
 	fi
+}
+
+echo "get sas token"
+storage_account=''
+sas=''
+
+function cp_azure(){ #path_from #path_to
+	path_from=$1
+	path_to=$2
+
+	url_from="https://$storage_account.blob.core.windows.net/$path_from$sas"
+	url_to="https://$storage_account.blob.core.windows.net/$path_to$sas"
+	echo "azcopy cp --recursive $url_from $url_to"
+	azcopy cp --recursive $url_from $url_to
+}
+function rm_azure(){ #path
+	ppath=$1
+	url="https://$storage_account.blob.core.windows.net/$ppath$sas"
+	#echo "disabled"
+	#echo "azcopy remove --recursive $url"
+	azcopy remove --recursive "$url"
+}
+function ls_azure(){ #path
+	ppath=$1
+	url="https://$storage_account.blob.core.windows.net/$ppath$sas"
+	echo "azcopy list $url"
+	azcopy list "$url"
+}
+function up_azure(){ #path_from #path_to
+	path_from=$1
+	path_to=$2
+	url_to="https://$storage_account.blob.core.windows.net/$path_to$sas"
+
+	echo "azcopy cp --recursive $path_from $url_to"
+	azcopy copy --recursive $path_from $url_to
+}
+function down_azure(){ #path_from #path_to
+	path_from=$1
+	url_from="https://$storage_account.blob.core.windows.net/$path_from$sas"
+	path_to=$2
+
+    mkdir -p "$path_to"
+	echo "azcopy cp --recursive $url_from $path_to"
+	azcopy cp --recursive "$url_from" "$path_to"
 }

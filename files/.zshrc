@@ -2,7 +2,8 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/gebruiker/.oh-my-zsh"
+export ZSH="/home/vm/.oh-my-zsh"
+export BROWSER="/usr/bin/google-chrome-stable"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -21,7 +22,7 @@ plugins=(
   zsh-syntax-highlighting
   zsh-autosuggestions
 )
-ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_AUTOSUGGEST_STRATEGY=(history)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -54,7 +55,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 source ~/.aliases
-#export PATH="/home/gebruiker/miniconda3/bin:$PATH"
 unsetopt share_history
+
+source $HOME/.oh-my-zsh/custom/plugins/fzf-tab-completion/zsh/fzf-zsh-completion.sh
+# or for everything
+zstyle ':completion:*' fzf-search-display true
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
